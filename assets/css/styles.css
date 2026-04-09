@@ -39,6 +39,7 @@ a{
 
 .btn:hover{
     opacity: 0.9;
+    cursor: pointer;
 }
 
 .main-content{
@@ -46,6 +47,21 @@ a{
     max-width: calc(100% - 48px);
     margin-left: auto;
     margin-right: auto;
+}
+
+.line-clamp{
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp.line-2{
+    --line-clamp: 2;
+}
+
+.word-break-all{
+    word-break: break-all;
 }
 
 .heading{
@@ -313,4 +329,88 @@ a{
     background: var(--primary-color);
     color: #fff;
     cursor: pointer;
+}
+
+.popular .courses-list{
+    display: flex;
+    margin-top: 55px;
+    gap:30px
+}
+
+.popular .course-item{
+    flex: 1;
+    /* CHiem toan bo khong gian con trong phan tu cha cua no */
+    border: 1px solid #e2dfda;
+    background: #fff;
+    border-radius: 12px;
+}
+
+.popular .course-item:hover{
+    border-color: transparent;
+    /* Khong de border thanh none boi vi gay hien tuong giat va xo cac phan tu khac */
+    box-shadow: 0px 18px 36px rgba(0 , 0, 0, 0.05);
+}
+
+.popular .course-item .thumb{
+    width: calc(100% + 2px);
+    /* De anh chiem toan bo khong gian con trong cua course-item va de len border vi da dung margin -1 o duoi nen 100% la khong du*/
+    height: 278px;
+    margin: -1px; 
+    /* Can anh de len border - border khong de len anh */
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.popular .course-item .info{
+    padding: 16px 22px 22px;
+}
+
+.popular .course-item .rating,
+.popular .course-item .root,
+.popular .course-item .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular .course-item .title a{
+    padding-right: 6px;
+    font-weight: 600;
+    font-size: 1,8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+
+.popular .rating .value{
+    margin-left: 16px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #fea31b;
+}
+
+.popular .course-item .desc{
+    margin-top: 6px;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #5f5b53;
+}
+
+.popular .course-item .root{
+    margin-top: 12px;
+}
+
+.popular .course-item .price{
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+
+.popular .course-item .book-btn{
+    border: none;
+}
+
+.popular .course-item .book-btn:hover{
+    color:#fff;
+    background: var(--primary-color);
 }
