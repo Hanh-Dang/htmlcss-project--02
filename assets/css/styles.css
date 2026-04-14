@@ -488,3 +488,54 @@ a{
     line-height: 1.54;
     color:#fff;
 }
+
+.features{
+    margin-top: 135px;
+    padding: 65px 0;
+
+}
+
+.features .body{
+    display: flex;
+}
+
+.features .images{
+    display: flex;
+    gap: 0 30px; /* Chieu ngang cach nhau 30px */
+    
+}
+
+.features .images img{
+    width: 270px;
+    height: 404px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.features .images img:first-child{
+    margin-top: 34px;
+}
+
+.features .content{
+    display: flex;
+    flex-direction: column; /* dung de can cac noi dung trong content theo chieu doc - nam giua trong content */
+    align-items: flex-start;
+    justify-content: center;
+    width: 41%;
+    margin-left: auto;
+}
+
+.features .desc{
+    margin-top: 16px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #5f5b53
+}
+
+.features .content .btn{
+    margin-top: 32px;
+    min-width: 137px;
+    color: #fff;
+    background: var(--primary-color)
+}
+
