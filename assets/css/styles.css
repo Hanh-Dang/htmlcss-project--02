@@ -578,12 +578,17 @@ a{
     margin-top: 55px;
     display: flex;
     gap: 30px;
+    overflow: hidden; 
 }
 
 .blog-list .blog-item{
-    width: 33.33%; /* Co 3 phan tu nen chua deu moi cai 33,33% la duoc 100% */
+    width: calc(33.33% - 20px); /* Co 3 phan tu nen chua deu moi cai 33.    33% la duoc 100% */
+    flex-shrink:0;
     background: #fff;
     border-radius: 16px;
+    transition: all .3s ease;
+    /* Khi hover se chuyen dong tu tu va mem mai hon */
+    /* transform: translateX(-100%); */ 
 }
 
 .blog-list .blog-item:hover{
@@ -643,7 +648,31 @@ a{
     color: #171100;
 }
 
+.blog .blog-item .btn{
+    font-size: 1.4rem;
+}
+
 .blog .blog-item .btn:hover{
     color: #fff;
     background: var(--primary-color);
+}
+
+.blog .dots{
+    margin-top: 38px;
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+}
+
+.blog .dot{
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #5f5b53;
+    cursor: pointer;
+}
+
+.blog .dot.active{
+    background: var(--primary-color);
+    cursor: default;
 }
